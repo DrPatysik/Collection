@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
- var array = ArrayOfList()
+ /*var array = ArrayOfList()
     array.add("Hello0")
     array.add("Help1")
     array.add("Super2")
@@ -33,11 +33,21 @@ fun main(args: Array<String>) {
    println( array.getIndexValue(6) )
    println( array.getIndexValue(7) )
    println( array.getIndexValue(8) )
-   println(array.size())
+   println(array.size())*/
 
+       ///задание с 3мя коллекциями, объединение 1го и второго в 3м
 
+    val numbers = arrayListOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val members = arrayListOf<String>(
+        "Vova", "Eva",
+        "Dima", "Elena",
+        "Alena", "Polina",
+        "Olga", "Tima",
+        "Egor", "Kolya"  )
+    val membersWithNumber = numbers.zip(members){number,member -> "$number - $member"}
+    println(membersWithNumber)
 
-
+    members.forEach { member -> print("$member, ") }
 
 
 }
