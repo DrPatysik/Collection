@@ -3,7 +3,6 @@ import java.lang.IndexOutOfBoundsException
 class ArrayOfList():FunOfList {
     private var myArray = arrayOfNulls<String>(10)
     var size = 0
-
     override fun size(): Int {
         return size
     }

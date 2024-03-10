@@ -18,6 +18,7 @@ fun main(args: Array<String>) {
  //println(array.getIndexValue(11))
  //println(array.size())
    // array.removeElement("Go4")
+
    //println(array.getIndexValue(11))
    //println(array.size())
    println(array.removeElement("End11"))

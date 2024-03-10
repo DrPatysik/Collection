@@ -1,4 +1,5 @@
 interface FunOfList {
+
     fun size():Int
     fun getIndexValue(index:Int):String
     fun add(element:String)
