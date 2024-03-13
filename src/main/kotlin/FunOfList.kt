@@ -1,8 +1,8 @@
-interface FunOfList {
+interface FunOfList<T> {
 
     fun size():Int
-    fun getIndexValue(index:Int):String
-    fun add(element:String)
-    fun removeElement(element: String)
+    fun getIndexValue(index:Int):T
+    fun add(element:T)
+    fun removeElement(element: T)
     fun removeAtIndex(index: Int)
 }

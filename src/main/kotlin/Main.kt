@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
- /*var array = ArrayOfList()
+/* var array = MyArrayOfList<String>()
     array.add("Hello0")
     array.add("Help1")
     array.add("Super2")
@@ -12,18 +12,18 @@ fun main(args: Array<String>) {
     array.add("Hi9")
     array.add("Go10")
     array.add("End11")
- //println(array.getIndexValue(0))
+ println(array.getIndexValue(0))
  //println(array.getIndexValue(2))
  //println(array.getIndexValue(1))
  //println(array.getIndexValue(11))
  //println(array.size())
    // array.removeElement("Go4")
 
-   //println(array.getIndexValue(11))
+   println(array.getIndexValue(11))
    //println(array.size())
-   println(array.removeElement("End11"))
+    println( array.removeAtIndex(5) )
+    println(array.removeElement("End11"))
    println(array.removeElement("Go5"))
-   //println( array.removeAtIndex(5) )
    println( array.getIndexValue(0) )
    println( array.getIndexValue(1) )
    println( array.getIndexValue(2) )
@@ -48,6 +48,9 @@ fun main(args: Array<String>) {
     println(membersWithNumber)
 
     members.forEach { member -> print("$member, ") }
+
+    //companion object
+    MyArrayOfList.createMyList(1,1,3,5,)
 
 
 }

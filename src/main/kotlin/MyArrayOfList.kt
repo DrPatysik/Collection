@@ -1,22 +1,23 @@
 import java.lang.IndexOutOfBoundsException
 
-class ArrayOfList():FunOfList {
-    private var myArray = arrayOfNulls<String>(10)
-    var size = 0
+class MyArrayOfList<T>(  ):FunOfList<T> {
+    private var myArray = arrayOfNulls<Any> (10)
+    private var size:Int = 0
+
     override fun size(): Int {
         return size
     }
 
-    override fun getIndexValue(index: Int): String {
+    override fun getIndexValue(index: Int): T {
         if (index in 0 until size){
             myArray[index]?.let {
-                return it
+                return it as T
             }
         }
         throw IndexOutOfBoundsException()
     }
 
-    override fun add(element: String) {
+    override fun add(element: T) {
         if (myArray.size <= size) {
             myArray = myArray.copyOf(size * 2)
         }
@@ -24,7 +25,7 @@ class ArrayOfList():FunOfList {
         size++
     }
 
-    override fun removeElement(element: String) {
+    override fun removeElement(element: T) {
         myArray.forEach { el -> if (el == element){
             removeAtIndex( myArray.indexOf(el) )
         } }
@@ -38,8 +39,15 @@ class ArrayOfList():FunOfList {
             }
             size--
         }
+        else throw IndexOutOfBoundsException()
     }
 
+    companion object {
+        fun <E> createMyList(vararg elem: E):MutableList<E> {
+            var myList = mutableListOf(elem)
+            return myList as MutableList<E>
+        }
+    }
 }
 
 
